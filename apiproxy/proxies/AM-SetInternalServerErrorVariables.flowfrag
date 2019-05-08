@@ -1,0 +1,5 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Condition>(flow.error.statusCode = null) AND (fault.name != "ErrorResponseCode")</Condition>
+                    <Name>AM-SetInternalServerErrorVariables</Name>
+                </Step>

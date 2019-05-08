@@ -1,0 +1,4 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Name>xmltojson-1</Name>
+                </Step>

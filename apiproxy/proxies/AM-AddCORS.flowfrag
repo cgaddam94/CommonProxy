@@ -1,0 +1,4 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Name>AM-AddCORS</Name>
+                </Step>

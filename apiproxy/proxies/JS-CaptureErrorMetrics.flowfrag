@@ -1,0 +1,4 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Name>JS-CaptureErrorMetrics</Name>
+                </Step>

@@ -1,0 +1,5 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Condition>(is.error=false)</Condition>
+                    <Name>LogSuccessResponseToELK</Name>
+                </Step>

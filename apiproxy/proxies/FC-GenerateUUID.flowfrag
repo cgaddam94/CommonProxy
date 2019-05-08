@@ -1,0 +1,4 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Name>FC-GenerateUUID</Name>
+                </Step>

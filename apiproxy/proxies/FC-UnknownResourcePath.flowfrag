@@ -1,0 +1,4 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Name>FC-UnknownResourcePath</Name>
+                </Step>

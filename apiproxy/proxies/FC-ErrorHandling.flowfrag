@@ -1,0 +1,5 @@
+                <!--added using maven plugin -->
+                <Step>
+                    <Name>FC-ErrorHandling</Name>
+                    <Condition>(fault.name != "ErrorResponseCode")</Condition>
+                </Step>
