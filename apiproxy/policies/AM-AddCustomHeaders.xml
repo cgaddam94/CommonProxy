@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-AddCustomHeaders">
+    <DisplayName>AM-AddCustomHeaders</DisplayName>
+    <Properties/>
+    <Add>
+        <Headers>
+            <Header name="customerId">{accesstoken.customerId}</Header>
+            <Header name="userName">{accesstoken.userName}</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

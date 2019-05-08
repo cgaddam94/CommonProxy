@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetInternalServerErrorVariables">
+    <DisplayName>AM-SetInternalServerErrorVariables</DisplayName>
+    <AssignVariable>
+        <Name>flow.error.statusCode</Name>
+        <Value>500</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.error.reasonPhrase</Name>
+        <Value>Internal Server Error</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.error.userMessage</Name>
+        <Value>Error in API proxy</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.error.systemMessage</Name>
+        <Value>Internal server error</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

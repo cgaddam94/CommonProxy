@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageLogging async="false" continueOnError="false" enabled="true" name="LogSuccessResponseToELK">
+    <DisplayName>LogSuccessResponseToELK</DisplayName>
+    <Syslog>
+        <Message variablePrefix="%" variableSuffix="#">{"requestId":"%requestId#,"time":"%system.time#","timing":"%bigString#","organization":"%organization.name#","environment":"%environment.name#","rmpUUID":"%system.uuid#","clientIp":"%client.host#","apiProduct":"%verifyapikey.Verify-API-Key.apiproduct.name#","developerApp":"%verifyapikey.Verify-API-Key.developer.app.name#","company":"%verifyapikey.Verify-API-Key.company.name#","companyApp":"%verifyapikey.Verify-API-Key.company.apps#","proxyName":"%apiproxy.name#","proxyrevision":"%apiproxy.revision#","apikey":"%request.header.X-Digikey-apikey#,"currency":"%request.header.X-DIGIKEY-Locale-Currency#","language":"%request.header.X-DIGIKEY-Locale-Language#","site":"%request.header.X-DIGIKEY-Locale-Site#","shipToCountry":"%X-DIGIKEY-Locale-ShipToCountry#,"quotaLimit":"%message.header.X-RateLimit-Limit#","quotaAvailableLimit":"%message.header.X-RateLimit-Remaining#","verb":"%request.verb#","url":"%client.scheme#://%host#%proxy.basepath#%proxy.pathsuffix#","responseCode":"%message.status.code#","responseReason:"%message.reason.phrase#"}</Message>
+        <Host>logsearch.digikey.us</Host>
+        <Port>514</Port>
+        <Protocol>TCP</Protocol>
+        <!-- <FormatMessage>true</FormatMessage>-->
+    </Syslog>
+    <logLevel>INFO</logLevel>
+</MessageLogging>

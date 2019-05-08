@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetFaultResponse">
+    <DisplayName>AM-SetFaultResponse</DisplayName>
+    <Properties/>
+    <Add>
+        <Headers>
+            <Header name="Access-Control-Allow-Origin">{request.header.origin}</Header>
+            <Header name="Access-Control-Allow-Headers">origin, x-requested-with, accept, content-type, authorization,x-digikey-apikey, x-digikey-locale-site, x-digikey-locale-language, x-digikey-locale-currency, x-digikey-locale-shiptocountry, x-digikey-customer-id</Header>
+            <Header name="Access-Control-Max-Age">3628800</Header>
+            <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE</Header>
+        </Headers>
+    </Add>
+    <Set>
+        <Headers/>
+        <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+        {
+        "ErrorResponseVersion":"3.0.0.0",
+        "StatusCode": %flow.error.statusCode#,
+        "ErrorMessage":"%flow.error.systemMessage#",
+        "ErrorDetails":"%flow.error.userMessage#",
+        "RequestId":"%requestId#",
+        "ValidationErrors":%flow.error.validationMessage#
+        }
+    </Payload>
+        <StatusCode>{flow.error.statusCode}</StatusCode>
+        <ReasonPhrase>{flow.error.reasonPhrase}</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
